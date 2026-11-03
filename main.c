@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Estrutura para armazenar os dados de um produto
+// Aqui é a estrutura para armazenar os dados de um produto
 struct Produto {
     int codigo;
     char nome[50];
@@ -10,8 +10,7 @@ struct Produto {
 };
 
 int main() {
-
-    struct Produto produtos[100];
+ struct Produto produtos[100];
 
     int opcao;
     int quantidade = 0;
@@ -24,7 +23,7 @@ int main() {
         printf("   CATALOGO DE ELETRONICOS\n");
         printf("==================================\n");
 
-        printf("1 - Cadastrar produto\n");
+        printf("1 - Cadastrar um produto\n");
         printf("2 - Listar produtos\n");
         printf("3 - Pesquisar por codigo\n");
         printf("4 - Pesquisar por nome\n");
@@ -39,8 +38,7 @@ int main() {
         switch (opcao) {
 
             case 1:
-
-                if (quantidade >= 100) {
+              if (quantidade >= 100) {
                     printf("\nLimite de produtos atingido!\n");
                     break;
                 }
@@ -50,18 +48,18 @@ int main() {
                 printf("Digite o codigo do produto: ");
                 scanf("%d", &produtos[quantidade].codigo);
 
-                codigoRepetido = 0;
+                codigorepetido = 0;
 
                 for (i = 0; i < quantidade; i++) {
 
                     if (produtos[i].codigo ==
                         produtos[quantidade].codigo) {
 
-                        codigoRepetido = 1;
+                        codigorepetido = 1;
                     }
                 }
 
-                if (codigoRepetido == 1) {
+                if (codigorepetido == 1) {
 
                     printf("\nErro! Esse codigo ja existe.\n");
 
