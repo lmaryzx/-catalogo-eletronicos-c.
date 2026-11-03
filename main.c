@@ -117,29 +117,8 @@ int main() {
                     }
                 }
 
-                break;
-
-            case 3:
-            case 4:
-            case 5:
-            case 6:
-            case 7:
-
-                printf("\nFuncionalidade em desenvolvimento.\n");
-
-                break;
-
-            case 0:
-
-                printf("\nEncerrando o programa...\n");
-
-                break;
-
-            default:
-
-                printf("\nOpcao invalida! Tente novamente.\n");
-        }
-
+                
+            
     } while (opcao != 0);
 
     return 0;
