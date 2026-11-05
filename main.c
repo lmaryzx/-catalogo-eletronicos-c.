@@ -15,37 +15,35 @@ int main() {
     int opcao;
     int quantidade = 0;
     int i;
-    int codigoRepetido;
+    int codigorepetido;
 
     do {
-
         printf("\n==================================\n");
         printf("   CATALOGO DE ELETRONICOS\n");
         printf("==================================\n");
 
         printf("1 - Cadastrar um produto\n");
-        printf("2 - Listar produtos\n");
-        printf("3 - Pesquisar por codigo\n");
-        printf("4 - Pesquisar por nome\n");
-        printf("5 - Consultar por categoria\n");
-        printf("6 - Alterar produto\n");
-        printf("7 - Excluir produto\n");
+        printf("2 - Listar produto\n");
+        printf("3 - Pesquise por codigo\n");
+        printf("4 - Pesquise por nome\n");
+        printf("5 - Consulte por categoria\n");
+        printf("6 - Altere produto\n");
+        printf("7 - Exclua produto\n");
         printf("0 - Sair\n");
 
         printf("\nEscolha uma opcao: ");
         scanf("%d", &opcao);
 
         switch (opcao) {
-
             case 1:
               if (quantidade >= 100) {
-                    printf("\nLimite de produtos atingido!\n");
+                    printf("\no limite de produtos foi atingido!\n");
                     break;
                 }
 
                 printf("\n===== CADASTRAR PRODUTO =====\n");
 
-                printf("Digite o codigo do produto: ");
+                printf("qual é o codigo do produto? ");
                 scanf("%d", &produtos[quantidade].codigo);
 
                 codigorepetido = 0;
@@ -79,7 +77,7 @@ int main() {
 
                     if (produtos[quantidade].preco <= 0) {
 
-                        printf("\nErro! O preco deve ser maior que zero.\n");
+                        printf("\nErro! O preco tem que ser maior que zero.\n");
 
                     } else {
 
@@ -97,7 +95,7 @@ int main() {
 
                 if (quantidade == 0) {
 
-                    printf("Nenhum produto cadastrado.\n");
+                    printf("Nao ha produto cadastrado.\n");
 
                 } else {
 
